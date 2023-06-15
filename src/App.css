@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Russo+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+header{
+  background-color: #e7e7e7;
+}
+
+header nav{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 1em 0 1em 0;
+}
+
+header nav h1{
+  font-family: 'Russo One', sans-serif;
+}
+
+header nav .cart-nav{
+  width: 6em;
+  display: flex;
+  justify-content: space-evenly;
+  gap: 1em;
+}
+
+header nav .cart-nav .cart{
+  display: flex;
+  position: relative;
+}
+
+header nav .cart-nav svg,
+header nav .cart-nav .cart svg{
+  width: 1.5em;
+  height: 1.5em;
+  cursor: pointer;
+  transition: all .2s ease;
+}
+
+header nav .cart-nav svg:hover,
+header nav .cart-nav .cart svg:hover{
+  fill: #be74e9;
+  filter: drop-shadow(0px 0px 15px #954dbf);
+}
+
+header nav .cart-nav .cart svg{
+  border-radius: 5px;
+}
+
+header nav .cart-nav .cart span{
+  display: flex;
+  position: absolute;
+  bottom: 20px;
+  right: -10px;
+  justify-content: center;
+  align-items: center;
+  background-color: #ae67d77a;
+  color: #9300ff;
+  font-family: 'Oswald', sans-serif;
+  border-radius: 15px;
+  width: 1em;
+  height: 1em;
+}
+
+header nav ul{
+  display: flex;
+  gap: 1em;
+}
+
+header nav ul li{
+  list-style: none;
+}
+
+header nav ul li a{
+  text-decoration: none;
+  font-size: 1.2em;
+  color: #000;
+  font-family: 'Raleway', sans-serif;
+  background-image: linear-gradient(to right, #be74e9, #be74e9);
+  background-position: 0% 100%;
+  background-repeat: no-repeat;
+  background-size: 0% 2px;
+  transition: all 0.3s ease;
+}
+
+header nav ul li a:hover, header nav ul li a:focus {
+  color: currentColor;
+  background-size: 100% 2px;
+}
+
