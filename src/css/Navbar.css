@@ -1,0 +1,145 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Russo+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+header{
+  background-color: #e7e7e7;
+}
+
+header nav{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 1em 0 1em 0;
+}
+
+header nav a{
+ text-decoration: none;
+ color: #000;
+ border: none;
+ margin: 0;
+}
+
+header nav a h1{
+  font-family: 'Russo One', sans-serif;
+  user-select: none;
+  
+}
+
+header nav .cart-nav{
+  width: 6em;
+  display: flex;
+  justify-content: space-evenly;
+  gap: 1em;
+}
+
+header nav .cart-nav .cart{
+  display: flex;
+  position: relative;
+}
+header nav .cart-nav a,
+header nav .cart-nav .cart a{
+  text-decoration: none;
+  color: #000;
+  border: none;
+  margin: 0;
+}
+
+header nav .cart-nav a svg,
+header nav .cart-nav .cart a svg{
+  width: 1.5em;
+  height: 1.5em;
+  cursor: pointer;
+  transition: all .2s ease;
+}
+
+header nav .cart-nav a svg:hover,
+header nav .cart-nav .cart a svg:hover{
+  fill: #be74e9;
+  filter: drop-shadow(0px 0px 15px #954dbf);
+}
+
+header nav .cart-nav .cart a svg{
+  border-radius: 5px;
+}
+
+header nav .cart-nav .cart span{
+  display: flex;
+  position: absolute;
+  bottom: 20px;
+  right: -10px;
+  justify-content: center;
+  align-items: center;
+  background-color: #ae67d77a;
+  font-family: 'Oswald', sans-serif;
+  border-radius: 15px;
+  width: 1em;
+  height: 1em;
+}
+
+header nav ul{
+  display: flex;
+  gap: 1em;
+}
+
+header nav ul li{
+  list-style: none;
+}
+
+header nav ul li a{
+  text-decoration: none;
+  font-size: 1.2em;
+  color: #000;
+  display: inline-block;
+  width: 100%;
+  border: none;
+  margin: 0;
+  font-family: 'Raleway', sans-serif;
+  background-image: linear-gradient(to right, #be74e9, #be74e9);
+  background-position: 0% 100%;
+  background-repeat: no-repeat;
+  background-size: 0% 2px;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+header nav ul li a:hover, header nav ul li a:hover {
+  color: currentColor;
+  background-size: 100% 2px;
+}
+
+header nav ul li .dropdown-container .products-dropdown::after{
+  content: "\003e";
+  display: inline-block;
+  transition: all .1s ease;
+}
+
+header nav ul li .dropdown-container:hover .products-dropdown::after{
+  transform: rotate(90deg);
+}
+
+header nav ul li .dropdown-container .dropdown-menu-container{
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  text-align: left;
+  width: 12.5em;
+  padding: 0 1em 0.5em 1em;
+  background-color: #e7e7e7;
+  border: none;
+  border-radius: 0 0 5px 5px;
+  transform: translateY(-9999px)!important;
+  z-index: 2;
+}
+
+header nav ul li .dropdown-container:hover .dropdown-menu-container{
+  transform: translate(-50px, 0)!important;
+}

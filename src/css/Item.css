@@ -1,0 +1,40 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed&display=swap');
+
+a{
+    text-decoration: none;
+    color: #000;
+    position: relative;
+    border-bottom:1px solid rgba(187, 185, 185, 0.555);
+    margin-bottom: .5em;
+}
+
+a:hover{
+    color: #000;
+}
+
+a .card{
+    margin: .1em;
+    width : 17em;
+    height: 20em;
+    max-height: 20em;
+    overflow: hidden;
+    border-radius: 0;
+    border: none;
+}
+
+a .card .card-body h4{
+    font-family: 'Barlow Condensed', sans-serif;
+}
+
+a .card .card-body h5{
+    font-size: 1.3em;
+    font-family: 'Barlow Condensed', sans-serif;
+}
+
+a .card .card-img-top{
+    height: 12em;
+    width: 17em;
+    border-radius: 0;
+}
+
+

@@ -1,0 +1,81 @@
+@charset "UTF-8";
+
+.counter-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  margin-bottom: 1em;
+}
+.counter-container .counter {
+  background-color: #fff;
+  width: 35%;
+  height: 2em;
+  border-radius: 5px;
+  border: 1px solid rgb(32, 126, 209);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: initial;
+}
+.counter-container .counter .minus {
+  width: 2em;
+  height: 100%;
+  border-radius: 5px 0 0 5px;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  position: relative;
+}
+.counter-container .counter .minus::before {
+  content: "−";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateY(-50%) translateX(-50%);
+  color: rgb(32, 126, 209);
+}
+.counter-container .counter .number {
+  user-select: none;
+  font-weight: 600;
+  transition: all .3s ease;
+}
+.counter-container .counter .plus {
+  width: 2em;
+  height: 100%;
+  border-radius: 0 5px 5px 0;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  position: relative;
+}
+.counter-container .counter .plus::before {
+  content: "+";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateY(-50%) translateX(-50%);
+  color: rgb(32, 126, 209);
+}
+.counter-container .add-container {
+  width: 60%;
+}
+.counter-container .add-container .add-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: initial;
+  width: 100%;
+  background-color: #fff;
+  border-radius: 5px;
+  height: 2em;
+  border: 1px solid rgb(32, 126, 209);
+  cursor: pointer;
+  transition: background 0.3s ease;
+  font-weight: 600;
+}
+.counter-container .add-container .add-btn:hover {
+  background-color: #ebebeb;
+}
+
+/*# sourceMappingURL=App.css.map */
