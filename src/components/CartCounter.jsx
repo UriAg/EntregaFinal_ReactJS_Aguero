@@ -1,6 +1,5 @@
 import { useContext, useEffect, useState } from "react";
 import "../css/Counter.css"
-import data from "../mock-data.json"
 import { CartContext } from "../context/CartContext";
 
 //Counter component to select quantity of units - CartWidget.jsx

@@ -1,5 +1,4 @@
 import { useContext, useState } from "react";
-import data from "../mock-data.json"
 import "../css/Counter.css"
 import { CartContext } from "../context/CartContext";
 
