@@ -1,0 +1,88 @@
+@import './sources.css';
+
+.contact-container{
+    width: 100%;
+    padding-top: 1em;
+}
+
+.contact-container .medias-and-form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    font-family: 'Raleway', sans-serif;
+    background-color: var(--light-bg-color);
+    padding: .5em 0;
+}
+
+.contact-container .medias-and-form .medias-contact-container{
+    width: 15%;
+    min-width: 11em;
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-container .medias-and-form .medias-contact-container h1{
+    font-size: 1.5em;
+}
+
+.contact-container .medias-and-form .medias-contact-container span a{
+    text-decoration: none!important;
+    border: none;
+    margin-left: .5em;
+}
+
+.contact-container .medias-and-form .medias-contact-container span a::before{
+    content: "\21E8";
+    color: var(--btn-color);
+}
+
+.contact-container .medias-and-form .contact-form-container{
+    width: 40%;
+    min-width: 28.6em;
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-container .medias-and-form .contact-form-container input,
+.contact-container .medias-and-form .contact-form-container textarea{
+    padding: .3em .5em;
+    outline: none;
+    resize: none;
+    background-color: #7c787842;
+    border: none;
+    border-radius: 5px;
+}
+
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+  margin: 0; 
+}
+
+.contact-container .medias-and-form .contact-form-container input:focus,
+.contact-container .medias-and-form .contact-form-container textarea:focus{
+    border: 1px solid rgba(53, 196, 240, 0.491);
+    -webkit-box-shadow: 0px 0px 7px 0px rgba(130,226,255,1);
+    -moz-box-shadow: 0px 0px 7px 0px rgba(130,226,255,1);
+    box-shadow: 0px 0px 7px 0px rgba(130,226,255,1);
+}
+
+.contact-container .medias-and-form .contact-form-container .submit-btn{
+    text-align: center;
+    padding-top: 1em;
+}
+
+.contact-container .medias-and-form .contact-form-container .submit-btn button{
+    width: 50%;
+    padding: .5em;
+    border: none;
+    border-radius: 5px;
+    background-color: var(--btn-color);
+    color: #fff;
+    transition: background .3s ease;
+}
+
+.contact-container .medias-and-form .contact-form-container .submit-btn button:hover{
+    background-color: var(--btn-color-hover);
+}

@@ -1,22 +1,24 @@
+import { useContext } from "react";
 import { Counter } from "./Counter"
+import { CartContext } from "../context/CartContext";
 
-// Componente renderiza información de un item individual, se utiliza en ItemDetailsContainer
+//Show information of an individual item - ItemDetailsContainer.jsx
 function ItemDetails( {product} ){
-  
-  //Función retorna cantidad de unidades agregadas al carrito
-  const onAdd = (quantity) =>{
-    console.log(`Compraste ${quantity} unidades de ${product.product_name}`);
+  const {addProduct} = useContext(CartContext);
+
+  //Add to cart function, defined at CartContext.jsx
+  const onAdd = (quantity, productoEnBase) =>{
+    addProduct(product, quantity, productoEnBase);
   }
 
   return (
-    <div className="card" id={product.product_id} value={product.quantity}>
-        <img src={product.image_url} className="card-img-top" alt={product.product_name + "'s " + "image"}/>
+    <div className="card" id={product.id}>
+        <img src={product.image_url} className="card-img-top" alt={`${product.name}"'s"`}/>
         <div className="card-body">
-            <h4 className="card-title">{product.product_name}</h4>
+            <h4 className="card-title">{product.name}</h4>
             <p className="card-text">{product.description}</p>
             <h5>${product.price}</h5>
-            <Counter minimum={product.minimum} stock={product.quantity} onAdd={onAdd}/>
-            <a href="#" className="btn btn-primary">{"Ver más de "+ product.product_name}</a>
+            <Counter onAdd={onAdd} product={product}/>
         </div>
     </div>
   )

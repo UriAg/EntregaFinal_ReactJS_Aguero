@@ -1,38 +1,35 @@
 import { useState, useEffect } from "react"
 import { ItemList } from "./ItemList"
-import jsonProductData from "../mock-data.json"
 import { useParams } from "react-router-dom"
+import { collection, getDocs } from "firebase/firestore"
+import { db } from "../firebase/config"
 
-//Componente contenedor de los productos
 export const ItemListContainer = () =>{
 
     const [products, setProducts] = useState([]);
     const [title, setTitle] = useState();
-    const category = useParams().category;
-
-    // Función promise, evalúa la "BBDD" en este caso el archivo JSON
-    const productPromise = (resolveArray)=>{ 
-        return new Promise((resolve, reject) => {
-            setTimeout(()=>{
-                resolve(resolveArray);
-            }, 2000);
-        });
-    }
-
+    
     //Se almacena en "products" la categoría seleccionada cada vez que se actualiza "category"
     //"category" (URL param para uso dinámico '/products/:category')
+    
+    const category = useParams().category;
+
     useEffect(()=>{
-        productPromise(jsonProductData)
-        .then((resp) => resp)
-        .then((data) =>{
+        const productsRef = collection(db, 'products');
+        getDocs(productsRef).then((resp) =>{
             if(category){
-                setProducts(data.filter((prod) => prod.category === category));
+                const objeto = resp.docs.filter((doc) => doc.data().category === category);
+                setProducts(objeto.map((doc)=>{
+                    return {...doc.data(), id: doc.id}
+                }));
                 setTitle(category);
             }else{
-                setProducts(data);
-                setTitle("Productos")
+                setProducts(resp.docs.map((doc)=>{
+                    return {...doc.data(), id: doc.id}
+                }))
+                setTitle("Todos")
             }
-        });
+        })
     }, [category])
 
     return( 

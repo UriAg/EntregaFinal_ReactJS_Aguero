@@ -1,9 +1,9 @@
 [
     {
         "product_id":1,
-        "product_name":"Cheese - Shred Cheddar / Mozza",
+        "name":"Cheese - Shred Cheddar / Mozza",
         "price":661.48,
-        "quantity":13,
+        "stock":13,
         "description":"Nam ultrices, libero non mattis pulvinar, nulla pede ullamcorper augue, a suscipit nulla elit ac nulla. Sed vel enim sit amet nunc viverra dapibus. Nulla suscipit ligula in lacus.",
         "image_url":"https://static.vecteezy.com/system/resources/previews/014/929/909/non_2x/the-computer-screen-is-waiting-to-load-the-video-internet-without-signal-vector.jpg",
         "minimum":4,
@@ -12,9 +12,9 @@
 
     {
         "product_id":2,
-        "product_name":"Bread - White, Unsliced",
+        "name":"Bread - White, Unsliced",
         "price":863.83,
-        "quantity":16,
+        "stock":16,
         "description":"Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Proin risus. Praesent lectus.\n\nVestibulum quam sapien, varius ut, blandit non, interdum in, ante. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Duis faucibus accumsan odio. Curabitur convallis.",
         "image_url":"https://static.vecteezy.com/system/resources/previews/014/929/909/non_2x/the-computer-screen-is-waiting-to-load-the-video-internet-without-signal-vector.jpg",
         "minimum":1,
@@ -23,9 +23,9 @@
 
     {
         "product_id":3,
-        "product_name":"Wine - Chateau Timberlay",
+        "name":"Wine - Chateau Timberlay",
         "price":129.69,
-        "quantity":13,
+        "stock":13,
         "description":"Fusce consequat. Nulla nisl. Nunc nisl.\n\nDuis bibendum, felis sed interdum venenatis, turpis enim blandit mi, in porttitor pede justo eu massa. Donec dapibus. Duis at velit eu est congue elementum.",
         "image_url":"https://static.vecteezy.com/system/resources/previews/014/929/909/non_2x/the-computer-screen-is-waiting-to-load-the-video-internet-without-signal-vector.jpg",
         "minimum":3,
@@ -34,9 +34,9 @@
 
     {
         "product_id":4,
-        "product_name":"Quinoa",
+        "name":"Quinoa",
         "price":211.54,
-        "quantity":10,
+        "stock":10,
         "description":"Duis bibendum. Morbi non quam nec dui luctus rutrum. Nulla tellus.\n\nIn sagittis dui vel nisl. Duis ac nibh. Fusce lacus purus, aliquet at, feugiat non, pretium quis, lectus.",
         "image_url":"https://static.vecteezy.com/system/resources/previews/014/929/909/non_2x/the-computer-screen-is-waiting-to-load-the-video-internet-without-signal-vector.jpg",
         "minimum":1,
@@ -45,9 +45,9 @@
 
     {
         "product_id":5,
-        "product_name":"Chef Hat 25cm",
+        "name":"Chef Hat 25cm",
         "price":927.3,
-        "quantity":17,
+        "stock":17,
         "description":"Maecenas tristique, est et tempus semper, est quam pharetra magna, ac consequat metus sapien ut nunc. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Mauris viverra diam vitae quam. Suspendisse potenti.\n\nNullam porttitor lacus at turpis. Donec posuere metus vitae ipsum. Aliquam non mauris.\n\nMorbi non lectus. Aliquam sit amet diam in magna bibendum imperdiet. Nullam orci pede, venenatis non, sodales sed, tincidunt eu, felis.",
         "image_url":"https://static.vecteezy.com/system/resources/previews/014/929/909/non_2x/the-computer-screen-is-waiting-to-load-the-video-internet-without-signal-vector.jpg",
         "minimum":1,
@@ -56,9 +56,9 @@
 
     {
         "product_id":6,
-        "product_name":"Bread - Bagels, Mini",
+        "name":"Bread - Bagels, Mini",
         "price":577.64,
-        "quantity":3,
+        "stock":3,
         "description":"In hac habitasse platea dictumst. Morbi vestibulum, velit id pretium iaculis, diam erat fermentum justo, nec condimentum neque sapien placerat ante. Nulla justo.\n\nAliquam quis turpis eget elit sodales scelerisque. Mauris sit amet eros. Suspendisse accumsan tortor quis turpis.",
         "image_url":"https://static.vecteezy.com/system/resources/previews/014/929/909/non_2x/the-computer-screen-is-waiting-to-load-the-video-internet-without-signal-vector.jpg",
         "minimum":2,
@@ -67,9 +67,9 @@
 
     {
         "product_id":7,
-        "product_name":"Frangelico",
+        "name":"Frangelico",
         "price":554.15,
-        "quantity":2,
+        "stock":2,
         "description":"Sed sagittis. Nam congue, risus semper porta volutpat, quam pede lobortis ligula, sit amet eleifend pede libero quis orci. Nullam molestie nibh in lectus.",
         "image_url":"https://static.vecteezy.com/system/resources/previews/014/929/909/non_2x/the-computer-screen-is-waiting-to-load-the-video-internet-without-signal-vector.jpg",
         "minimum":1,
@@ -78,9 +78,9 @@
 
     {
         "product_id":8,
-        "product_name":"Lid Tray - 16in Dome",
+        "name":"Lid Tray - 16in Dome",
         "price":923.02,
-        "quantity":12,
+        "stock":12,
         "description":"Vestibulum quam sapien, varius ut, blandit non, interdum in, ante. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Duis faucibus accumsan odio. Curabitur convallis.\n\nDuis consequat dui nec nisi volutpat eleifend. Donec ut dolor. Morbi vel lectus in quam fringilla rhoncus.",
         "image_url":"https://static.vecteezy.com/system/resources/previews/014/929/909/non_2x/the-computer-screen-is-waiting-to-load-the-video-internet-without-signal-vector.jpg",
         "minimum":3,
@@ -89,9 +89,9 @@
 
     {
         "product_id":9,
-        "product_name":"Kellogs Special K Cereal",
+        "name":"Kellogs Special K Cereal",
         "price":370.87,
-        "quantity":9,
+        "stock":9,
         "description":"Nullam porttitor lacus at turpis. Donec posuere metus vitae ipsum. Aliquam non mauris.\n\nMorbi non lectus. Aliquam sit amet diam in magna bibendum imperdiet. Nullam orci pede, venenatis non, sodales sed, tincidunt eu, felis.\n\nFusce posuere felis sed lacus. Morbi sem mauris, laoreet ut, rhoncus aliquet, pulvinar sed, nisl. Nunc rhoncus dui vel sem.",
         "image_url":"https://static.vecteezy.com/system/resources/previews/014/929/909/non_2x/the-computer-screen-is-waiting-to-load-the-video-internet-without-signal-vector.jpg",
         "minimum":1,
@@ -101,9 +101,9 @@
     {
         
         "product_id":10,
-        "product_name":"Cookie Dough - Oatmeal Rasin",
+        "name":"Cookie Dough - Oatmeal Rasin",
         "price":885.06,
-        "quantity":12,
+        "stock":12,
         "description":"Fusce posuere felis sed lacus. Morbi sem mauris, laoreet ut, rhoncus aliquet, pulvinar sed, nisl. Nunc rhoncus dui vel sem.\n\nSed sagittis. Nam congue, risus semper porta volutpat, quam pede lobortis ligula, sit amet eleifend pede libero quis orci. Nullam molestie nibh in lectus.\n\nPellentesque at nulla. Suspendisse potenti. Cras in purus eu magna vulputate luctus.",
         "image_url":"https://static.vecteezy.com/system/resources/previews/014/929/909/non_2x/the-computer-screen-is-waiting-to-load-the-video-internet-without-signal-vector.jpg",
         "minimum":2,

@@ -7,26 +7,31 @@ import { HomePage } from './components/HomePage';
 import { Cart } from './components/Cart';
 import { Information } from './components/Information';
 import { Contact } from './components/Contact';
+import { CartProvider } from './context/CartContext';
+import Checkout from './components/Checkout';
 
 
 
 function App() {
   return (
     <>
-      <BrowserRouter>
-        <Navbar />
-          <Routes>
+      <CartProvider>
+        <BrowserRouter>
+          <Navbar />
+            <Routes>
 
-            <Route path="/"  element={<HomePage/>}/>
-            <Route path="/cart"  element={<Cart/>}/>
-            <Route path="/info"  element={<Information/>}/>
-            <Route path="/contact"  element={<Contact/>}/>
-            <Route path="/products/"  element={<ItemListContainer/>}/>
-            <Route path="/products/:category"  element={<ItemListContainer/>}/>
-            <Route path="/item/:id"  element={<ItemDetailsContainer/>}/>
+              <Route path="/"  element={<HomePage/>}/>
+              <Route path="/cart"  element={<Cart/>}/>
+              <Route path="/info"  element={<Information/>}/>
+              <Route path="/contact"  element={<Contact/>}/>
+              <Route path="/products/"  element={<ItemListContainer/>}/>
+              <Route path="/products/:category"  element={<ItemListContainer/>}/>
+              <Route path="/item/:id"  element={<ItemDetailsContainer/>}/>
+              <Route path="/checkout"  element={<Checkout/>}/>
 
-          </Routes>
-      </BrowserRouter>
+            </Routes>
+        </BrowserRouter>
+      </CartProvider>
     </>
   );
 }

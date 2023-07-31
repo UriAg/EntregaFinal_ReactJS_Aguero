@@ -1,21 +1,15 @@
 import "../css/Item.css"
 import { Link } from 'react-router-dom';
 
-//Componente renderiza item individual para ItemList
+//Item component - ItemList.jsx
 export const Item = ({product}) =>{
 
-  //Función retorna cantidad de unidades agregadas al carrito
-  const onAdd = (quantity) =>{
-    console.log(`Compraste ${quantity} unidades`);
-  }
-
   return (
-    /* Redirecciona a la ruta dinámica /item/{id de un producto}*/
-    <Link to={`/item/${product.product_id}`}>
-      <div className="card" id={product.product_id} value={product.quantity}>
-          <img src={product.image_url} className="card-img-top" alt={product.product_name + "'s " + "image"}/>
+    <Link to={`/item/${product.id}`} style={{maxWidth:"25em"}}>
+      <div className="card" id={product.id}>
+          <img src={product.image_url} className="card-img-top" alt={`${product.name}"'s "`}/>
           <div className="card-body">
-              <h4 className="card-title">{product.product_name}</h4>
+              <h4 className="card-title">{product.name}</h4>
               <h5>${product.price}</h5>
           </div>
       </div>

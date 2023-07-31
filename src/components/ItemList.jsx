@@ -1,28 +1,35 @@
+import { Link } from 'react-router-dom'
 import { Item } from './Item'
 
-//Componente muestra un array de objetos, utilizada en ItemListContainer
+//Shows an array of products - ItemListContainer.jsx
 export const ItemList = ({productsData, title}) =>{
     let containerStyles = {
-        display: "flex",
-        justifyContent: "space-around",
-        flexWrap: "wrap"
-    }
-
-    let estilos = {
-        textAlign: "left",
-        marginLeft: "1.5em"
+        display: "Grid",
+        gridTemplateColumns: "repeat(auto-fit, minmax(20em, 1fr))",
+        gap: "1em",
+        justifyItems:"center"
     }
 
   return (
-    <div style={{paddingTop:"1em"}}>
-        <h2 style={estilos}>Sección: { title ? title.charAt(0).toUpperCase()+title.slice(1): "Productos"}</h2>
+    <div style={{padding:"1em .5em 0 .5em"}}>
+        {
+            title &&
+            <nav aria-label="breadcrumb">
+                <ol className="breadcrumb" style={{fontSize:"1.5em", marginBottom:".5em"}}>
+                    <li className="breadcrumb-item"><Link to="/">Inicio</Link></li>
+                    <li className="breadcrumb-item"><Link to="/products">Productos</Link></li>
+                    <li className="breadcrumb-item active" aria-current="page">{title.charAt(0).toUpperCase()+title.slice(1)}</li>
+                </ol>
+            </nav>
+        }
+        
         <div style={containerStyles}>
             {
                 productsData.length > 0 && 
                 productsData.map((product)=>{
                     
                     return(
-                        <Item product={product} key={product.product_id}/>
+                        <Item product={product} key={product.id}/>
                     );
                 })     
             }

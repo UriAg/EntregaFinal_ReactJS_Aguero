@@ -1,0 +1,44 @@
+@import './sources.css';
+
+.container{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--light-bg-color);
+    margin-top: 4em;
+    padding: .5em;
+}
+
+.container .contact-form-container{
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.container .contact-form-container input,
+.container .contact-form-container textarea{
+    width: 100%;
+    border: none;
+    outline: none;
+    padding: .2em;
+}
+
+.container .contact-form-container textarea{
+    resize: none;
+}
+
+.container .contact-form-container .label-div {
+    width: 100%;
+}
+
+.container .contact-form-container .submit-btn{
+    width: 100%;
+    text-align: center;
+}
+
+.container .contact-form-container .submit-btn button{
+    margin: 1em 0 .5em 0;
+    width: 50%;
+}

@@ -1,10 +1,7 @@
 import "../css/Navbar.css"
-import { useEffect, useState } from "react";
 import { CartWidget } from "./CartWidget";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
-
-// Componente para navegación superior
 export const Navbar = () =>{
     
     return (
@@ -12,19 +9,22 @@ export const Navbar = () =>{
             <nav>
                 <Link to="/"><h1 className="m-0 p-0">Flart</h1></Link>
                 <ul className="m-0 p-0">
-                    <li><Link to="/">Inicio</Link></li>
+                    <li><CustomLink href={"/"}>Inicio</CustomLink></li>
                     <li>
                         <div className="dropdown-container">
-                            <Link className="products-dropdown" to="/products">Productos </Link>
+                            <CustomLink className={"products-dropdown"} href={"/products"}>Productos </CustomLink>
+                            
                             <ul className="dropdown-menu-container">
-                                <li><Link className="dropdown-menu-item" to="/products/tablas">Tablas</Link></li>
-                                <li><Link className="dropdown-menu-item" to="/products/cazuelas">Cazuelas</Link></li>
-                                <li><Link className="dropdown-menu-item" to="/products/utensilios">Utensiliosssssssssssss</Link></li>
+                               
+                                <li><CustomLink className={"dropdown-menu-item"} href={"/products/tablas"}>Tablas </CustomLink></li>
+                                <li><CustomLink className={"dropdown-menu-item"} href={"/products/cazuelas"}>Cazuelas </CustomLink></li>
+                                <li><CustomLink className={"dropdown-menu-item"} href={"/products/utensilios"}>Utensiliosssssssssssss </CustomLink></li>
+
                             </ul>
                         </div>
                     </li>
-                    <li><Link to="/contact">Contacto</Link></li>
-                    <li><Link to="/info">Información</Link></li>
+                    <li><CustomLink href={"/contact"}>Contacto</CustomLink></li>
+                    <li><CustomLink href={"/info"}>Información</CustomLink></li>
                 </ul>
                 <CartWidget/>
             </nav>
@@ -32,3 +32,9 @@ export const Navbar = () =>{
     );
 }
 
+function CustomLink({className, href, children, ...props}){
+    const path = useLocation().pathname;
+    return(
+        <Link className={`${className ? className: ""} ${path === href ? "active-link" : ""}`} to={href} {...props}>{children}</Link>
+    )
+}

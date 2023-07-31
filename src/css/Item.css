@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed&display=swap');
+@import './sources.css';
 
 a{
     text-decoration: none;
@@ -13,10 +13,8 @@ a:hover{
 }
 
 a .card{
-    margin: .1em;
-    width : 17em;
-    height: 20em;
-    max-height: 20em;
+    width: 100%;
+    height: auto;
     overflow: hidden;
     border-radius: 0;
     border: none;
@@ -32,8 +30,8 @@ a .card .card-body h5{
 }
 
 a .card .card-img-top{
-    height: 12em;
-    width: 17em;
+    width: 100%;
+    height: auto;
     border-radius: 0;
 }
 

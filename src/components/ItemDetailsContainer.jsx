@@ -2,28 +2,32 @@ import ItemDetails from "./ItemDetails"
 import data from "../mock-data.json"
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
+import { doc, getDoc } from "firebase/firestore";
+import { db } from "../firebase/config";
 
-// Componente contenedor de información individual
+//Container of individual product info
 export const ItemDetailsContainer = () =>{
 
   
   const [item, setItem] = useState(null);
-  const productId = Number(useParams().id);
+  const productId = useParams().id;
 
-    //Definición de promesa, busca el id en en el array, si lo encuentra lo almacena
-    const detailsPromise = (itemId) =>{
-        return new Promise((resolve, reject)=>{
-          const selectedItem = data.find((element)=> element.product_id === itemId);
-          selectedItem ? resolve(selectedItem) : reject({error:"Error, item no encontrado"});
-        });
-    };
+    //Check if the product exist
+    // const detailsPromise = (itemId) =>{
+    //     return new Promise((resolve, reject)=>{
+    //       const selectedItem = data.find((element)=> element.product_id === itemId);
+    //       selectedItem ? resolve(selectedItem) : reject({error:"Error, item no encontrado"});
+    //     });
+    // };
 
-    //Se usa la promesa cada vez que se actualiza productId (parametro id para BrowserRouter)
     useEffect(()=>{
-      detailsPromise(productId)
-      .then((data)=>{
-        setItem(data);
-      });
+      const docRef = doc(db, 'products', productId );
+      getDoc(docRef)
+      .then((resp) =>{
+         setItem(
+          {...resp.data(), id: resp.id}
+         )
+      })
     }, [productId])
 
     
@@ -31,7 +35,6 @@ export const ItemDetailsContainer = () =>{
     return (
       <div>
         {
-          // Si se valida la promise se muestra el producto
           item && <ItemDetails product={item}/>
         }
       </div>
