@@ -3,10 +3,12 @@ import { createContext, useEffect, useState } from "react";
 export const CartContext = createContext();
 
 const CartContent = JSON.parse(localStorage.getItem('cart')) || [];
+const purchaseOrderIdContent = JSON.parse(localStorage.getItem('salesIds')) || [];
 
 export const CartProvider = ( {children} ) =>{
     //Define cart state, empty array default
     const [cart, setCart] = useState(CartContent)
+    const [purchaseOrderId, setPurchaseOrderId] = useState(purchaseOrderIdContent)
     
     useEffect(()=>{
         localStorage.setItem('cart', JSON.stringify(cart))
@@ -41,13 +43,15 @@ export const CartProvider = ( {children} ) =>{
 
     //Calculate the total price of the products in cart - CartWidget.jsx
     const totalPrice = () =>{
-        return cart.reduce((acc, prod) => acc + (prod.price * prod.quantity), 0); 
+        return new Intl.NumberFormat('es-AR').format(Number.parseFloat(cart.reduce((acc, prod) => acc + (prod.price * prod.quantity), 0)).toFixed(2)); 
     }
 
     return(
         <CartContext.Provider value={ {
             cart,
             setCart,
+            purchaseOrderId,
+            setPurchaseOrderId,
             addProduct,
             nbrCartProducts,
             roundQuantity,

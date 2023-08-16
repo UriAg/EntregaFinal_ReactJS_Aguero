@@ -8,7 +8,7 @@ export const Cart = () => {
 
   return (
     <div className="container" style={{flexDirection:"column"}}>
-      <div className="table-responsive">
+      <div className="table-responsive" style={{width:"100%"}}>
         <table className="table">
           <thead>
             <tr>
@@ -35,7 +35,7 @@ export const Cart = () => {
                       <td>{product.name}</td>
                       <td>{new Intl.NumberFormat('es-AR', {style: 'currency', currency: 'ARS'}).format(Number.parseFloat(product.price).toFixed(2))}</td>
                       <td style={{width:"15em"}}><CartCounter product={product} className="justify-content-center"></CartCounter></td>
-                      <td className="text-center">{new Intl.NumberFormat('es-AR', {style: 'currency', currency: 'ARS'}).format(Number.parseFloat(product.price * product.stock).toFixed(2))}</td>
+                      <td className="text-center">{new Intl.NumberFormat('es-AR', {style: 'currency', currency: 'ARS'}).format(Number.parseFloat(product.price * product.quantity).toFixed(2))}</td>
                       <td>
                         <span className="delete-product">
                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-x-circle-fill" viewBox="0 0 16 16" onClick={()=>{setCart(cart.filter(prod => prod !== product))}}>

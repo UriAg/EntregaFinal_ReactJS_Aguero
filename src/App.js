@@ -8,7 +8,10 @@ import { Cart } from './components/Cart';
 import { Information } from './components/Information';
 import { Contact } from './components/Contact';
 import { CartProvider } from './context/CartContext';
-import Checkout from './components/Checkout';
+import { Sales } from './components/Sales';
+import { Checkout } from './components/Checkout';
+import { SuccesfulPurchase } from './components/SuccesfulPurchase';
+
 
 
 
@@ -28,6 +31,8 @@ function App() {
               <Route path="/products/:category"  element={<ItemListContainer/>}/>
               <Route path="/item/:id"  element={<ItemDetailsContainer/>}/>
               <Route path="/checkout"  element={<Checkout/>}/>
+              <Route path="/sales"  element={<Sales/>}/>
+              <Route path="/successfulpurchase"  element={<SuccesfulPurchase/>}/>
 
             </Routes>
         </BrowserRouter>

@@ -34,7 +34,7 @@ export const ItemListContainer = () =>{
 
     return( 
         <main>
-            <ItemList productsData={products} title={title}/>
+            <ItemList productsData={products} title={title} rol={"ItemListContainer"}/>
         </main>
     )
 }

@@ -18,7 +18,7 @@ export const Navbar = () =>{
                                
                                 <li><CustomLink className={"dropdown-menu-item"} href={"/products/tablas"}>Tablas </CustomLink></li>
                                 <li><CustomLink className={"dropdown-menu-item"} href={"/products/cazuelas"}>Cazuelas </CustomLink></li>
-                                <li><CustomLink className={"dropdown-menu-item"} href={"/products/utensilios"}>Utensiliosssssssssssss </CustomLink></li>
+                                <li><CustomLink className={"dropdown-menu-item"} href={"/products/utensilios"}>Utensilios </CustomLink></li>
 
                             </ul>
                         </div>

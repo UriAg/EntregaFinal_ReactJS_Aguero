@@ -6,13 +6,15 @@ header{
   position: sticky;
   top: 0;
   z-index: 1;
+  height: 11.5vh;
+  display: flex;
 }
 
 header nav{
   display: flex;
   justify-content: space-around;
   align-items: center;
-  padding: 1em 0 1em 0;
+  width: 100%;
 }
 
 header nav a{
@@ -103,12 +105,13 @@ header nav .cart-nav .offcanvas .offcanvas-header button::after{
 }
 
 header nav .cart-nav .offcanvas .offcanvas-body .offcanvas-body-container{
-  padding: 2em 1rem;
+  padding: 3em 1rem;
   height: 100%;
+  position: relative;
 }
 
 header nav .cart-nav .offcanvas .offcanvas-body .offcanvas-body-container .cartItemsPrevisualizer{
-  height: 85%;
+  height: 80%;
   overflow-y: scroll;
   display: flex;
   flex-direction: column;
@@ -177,8 +180,15 @@ header nav .cart-nav .offcanvas .offcanvas-body .offcanvas-body-container .cartI
 
 
 header nav .cart-nav .offcanvas .offcanvas-body .toCartButton{
-  height: 15%;
+  height: 20%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  margin: auto;
   display: flex;
+  flex-direction: column;
+  gap: .5em;
+  width: 100%;
   justify-content: center;
   align-items: center;
 }
@@ -210,7 +220,7 @@ header nav ul li{
 
 header nav ul li a{
   text-decoration: none;
-  font-size: 1.2em;
+  font-size: 1.3em;
   color: #000;
   display: inline-block;
   width: 100%;

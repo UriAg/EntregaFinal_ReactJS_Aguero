@@ -11,14 +11,6 @@ export const ItemDetailsContainer = () =>{
   const [item, setItem] = useState(null);
   const productId = useParams().id;
 
-    //Check if the product exist
-    // const detailsPromise = (itemId) =>{
-    //     return new Promise((resolve, reject)=>{
-    //       const selectedItem = data.find((element)=> element.product_id === itemId);
-    //       selectedItem ? resolve(selectedItem) : reject({error:"Error, item no encontrado"});
-    //     });
-    // };
-
     useEffect(()=>{
       const docRef = doc(db, 'products', productId );
       getDoc(docRef)

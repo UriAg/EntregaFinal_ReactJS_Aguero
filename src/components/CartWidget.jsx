@@ -5,8 +5,7 @@ import { CartCounter } from "./CartCounter";
 
 //Show icons, cart, login with redirection - Navbar.jsx
 export const CartWidget = () =>{
-
-    const {cart, setCart, nbrCartProducts, totalPrice} = useContext(CartContext);
+    const {cart, setCart, purchaseOrderId, nbrCartProducts, totalPrice} = useContext(CartContext);
 
     const topPrevisualizerStyles = {
         display:"flex",
@@ -75,13 +74,25 @@ export const CartWidget = () =>{
                                 }
                             </div>
                             <div>
-                                <h5 style={{borderTop:" 1px solid rgba(0, 0, 0, 0.19) ", paddingTop:".5em"}}>Total: ${new Intl.NumberFormat('es-AR').format(Number.parseFloat(totalPrice()).toFixed(2))}</h5>
+                                <h5 style={{borderTop:" 1px solid rgba(0, 0, 0, 0.19) ", paddingTop:".5em"}}>Total: ${totalPrice()}</h5>
                             </div>
                             <div className="toCartButton">
                                 <Link to="/cart">Ir al carrito</Link>
+                                {
+                                    purchaseOrderId.length >= 1 &&
+                                    <Link to="/sales">Ver mis compras</Link>
+                                }
                             </div>
                         </div> :
+                        <>
                             <p style={{textAlign:"center"}}>No hay productos</p>
+                            {
+                                purchaseOrderId.length >= 1 &&
+                                <div className="toCartButton">
+                                    <Link to="/sales">Ver mis compras</Link>
+                                </div>
+                            }
+                        </>
                     }
 
                     
