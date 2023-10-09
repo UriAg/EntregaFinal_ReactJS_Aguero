@@ -10,16 +10,24 @@ body .homepage-main{
 }
 
 body main .enter-shop-container{
-   padding: 1em;
+    width: 100%;
+    height: 100%;
+    padding: 1em;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+}
+
+body main .enter-shop-positioner{
+    width: 40%;
+    
+    padding: 1em;
     background-color: #ffffff79;
 }
 
 body main .enter-shop-container .enter-shop-btn{
-    width: 40em;
+    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -31,18 +39,26 @@ body main .enter-shop-container .enter-shop-btn{
 
 body main .enter-shop-btn h1{
     font-family: 'Russo One', sans-serif;
-    font-size: 7em;
-    border-bottom: 3px solid #1b1b1b;
+    font-size: calc(100vw/10);
     margin-top: .3em;
     position: relative;
-    animation: aver 1.5s;
+    animation: left-slide 1.5s;
+}
+
+body main .enter-shop-btn hr{
+    width: 70%;
+    margin: 0;
 }
 
 body main .enter-shop-btn a{
     border: 3px solid #1b1b1b;
-    padding: .5em 4em;
-    margin: 2em;
-    font-size: 1.5em;
+    width: 40%;
+    padding: .5em 0;
+    text-align: center;
+    text-decoration: none;
+    color: #1b1b1b;
+    margin: 10% 20%;
+    font-size: calc(100vw/50);
     font-family: 'Barlow Condensed', sans-serif;
     transition: all .2s ease;
 }
@@ -62,7 +78,26 @@ body .homepage-footer{
     font-family: 'Raleway', sans-serif;
 }
 
-@keyframes aver {
+@media screen and (max-width: 768px) {
+    body main .enter-shop-positioner{
+        width: 70%;
+        height: 100%;
+    }
+
+    body main .enter-shop-container .enter-shop-btn{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background-color: #ffffff79;
+        border: 3px solid #1b1b1b;
+        overflow: hidden;
+    }
+}
+
+@keyframes left-slide {
     from{
         right: -5em;
         opacity: 0;

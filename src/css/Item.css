@@ -1,40 +1,43 @@
 @import './sources.css';
 
-a{
+.item-link{
     text-decoration: none;
     color: #000;
+    box-shadow: 0 0 6px -2px;
     position: relative;
     border-bottom:1px solid rgba(187, 185, 185, 0.555);
     margin-bottom: .5em;
 }
 
-a:hover{
+.item-link:hover > .card{
     color: #000;
+    background-color: rgba(0, 0, 0, 0.15);  
 }
 
-a .card{
+.item-link .card{
     width: 100%;
     height: auto;
     overflow: hidden;
     border-radius: 0;
     border: none;
+    transition: all .2s ease;
 }
 
-a .card .card-body h4{
+.item-link .card .card-body h4{
     font-family: 'Barlow Condensed', sans-serif;
 }
 
-a .card .card-body h5{
+.item-link .card .card-body h5{
     font-size: 1.3em;
     font-family: 'Barlow Condensed', sans-serif;
 }
 
-a .card .card-body span{
+.item-link .card .card-body span{
     font-size: 1.3em;
     font-family: 'Barlow Condensed', sans-serif;
 }
 
-a .card .card-img-top{
+.item-link .card .card-img-top{
     width: 100%;
     height: auto;
     border-radius: 0;

@@ -1,6 +1,5 @@
 import { Link } from "react-router-dom"
 import '../css/HomePage.css'
-import { useEffect } from "react"
 
 
 export const HomePage = () => {
@@ -8,9 +7,12 @@ export const HomePage = () => {
     <>
       <main className="homepage-main">
         <div className="enter-shop-container">
-          <div className="enter-shop-btn">
-            <h1>Flart</h1>
-            <Link to={"/products"}>Visitar</Link>
+          <div className="enter-shop-positioner">
+            <div className="enter-shop-btn">
+              <h1>Flart</h1>
+              <hr/>
+              <Link to={"/products"}>Visitar</Link>
+            </div>
           </div>
         </div>
       </main>

@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 export const Item = ({product, rol}) =>{
 
   return (
-    <Link to={`/item/${product.id}`} style={{maxWidth:"25em"}}>
+    <Link to={`/item/${product.id}`} className="item-link" style={{maxWidth:"25em"}}>
       <div className="card" id={product.id}>
           
           <img src={product.image_url} className="card-img-top" alt={`${product.name}"'s "`}/>

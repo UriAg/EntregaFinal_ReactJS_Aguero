@@ -7,8 +7,8 @@ export const Cart = () => {
   const {cart, setCart} = useContext(CartContext);
 
   return (
-    <div className="container" style={{flexDirection:"column"}}>
-      <div className="table-responsive" style={{width:"100%"}}>
+    <div className="container" style={{flexDirection:"column", position:"relative"}}>
+      <div className="table-responsive" style={{width:"100%", position:"absolute", top:"0"}}>
         <table className="table">
           <thead>
             <tr>
@@ -37,7 +37,7 @@ export const Cart = () => {
                       <td style={{width:"15em"}}><CartCounter product={product} className="justify-content-center"></CartCounter></td>
                       <td className="text-center">{new Intl.NumberFormat('es-AR', {style: 'currency', currency: 'ARS'}).format(Number.parseFloat(product.price * product.quantity).toFixed(2))}</td>
                       <td>
-                        <span className="delete-product">
+                        <span className="delete-product" style={{cursor:"pointer"}}>
                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-x-circle-fill" viewBox="0 0 16 16" onClick={()=>{setCart(cart.filter(prod => prod !== product))}}>
                                 <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM5.354 4.646a.5.5 0 1 0-.708.708L7.293 8l-2.647 2.646a.5.5 0 0 0 .708.708L8 8.707l2.646 2.647a.5.5 0 0 0 .708-.708L8.707 8l2.647-2.646a.5.5 0 0 0-.708-.708L8 7.293 5.354 4.646z"/>
                             </svg>
@@ -50,7 +50,7 @@ export const Cart = () => {
           </tbody>
         </table>
       </div>
-      <Link to={'/checkout'}>Finalizar compra </Link>
+      <Link to={'/checkout'} style={{position:"absolute", bottom:"10px"}}>Finalizar compra </Link>
     </div>
   )
 }

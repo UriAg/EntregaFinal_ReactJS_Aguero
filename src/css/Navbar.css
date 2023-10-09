@@ -24,6 +24,10 @@ header nav a{
  margin: 0;
 }
 
+header nav a:hover{
+ color: #000;
+}
+
 header nav a h1{
   font-family: 'Russo One', sans-serif;
   user-select: none;
